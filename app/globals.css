@@ -132,6 +132,17 @@ button{ font-family:inherit; cursor:pointer; background:none; border:none; color
   transition:background var(--dur) var(--ease), padding var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
   border-bottom:1px solid transparent;
 }
+/* The scroll-solid blur lives on this pseudo-element rather than directly
+   on .site-header: backdrop-filter (like transform/filter/perspective)
+   makes the element it's set on a new containing block for any
+   position:fixed descendant. .main-nav (the mobile drawer) is fixed and
+   nested inside this header, so putting backdrop-filter on .site-header
+   itself broke the drawer's full-viewport sizing once scrolled solid. */
+.site-header::before{
+  content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+  transition:backdrop-filter var(--dur) var(--ease);
+}
+.site-header.is-solid::before{ backdrop-filter:blur(10px); }
 .site-header .container{ display:flex; align-items:center; justify-content:space-between; gap:20px; }
 
 /* ---------- utility bar (Jumeirah-style thin top strip) ---------- */
@@ -161,7 +172,6 @@ button{ font-family:inherit; cursor:pointer; background:none; border:none; color
 
 .site-header.is-solid{
   background:rgba(250,247,241,.92);
-  backdrop-filter:blur(10px);
   padding:0 0 14px;
   border-color:var(--line);
   box-shadow:0 12px 30px -20px rgba(32,29,24,.35);
