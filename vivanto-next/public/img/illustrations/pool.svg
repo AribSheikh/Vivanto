@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200" preserveAspectRatio="xMidYMid slice">
+<defs>
+
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#17140f"/>
+    <stop offset="55%" stop-color="#3a2e1d"/>
+    <stop offset="100%" stop-color="#2b241a"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.3" r="0.55">
+    <stop offset="0%" stop-color="#c9a466" stop-opacity="0.55"/>
+    <stop offset="45%" stop-color="#c9a466" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#c9a466" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="vign" cx="0.5" cy="0.5" r="0.75">
+    <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.38"/>
+  </radialGradient>
+
+</defs>
+
+  <rect width="1600" height="1200" fill="url(#sky)"/>
+  <rect width="1600" height="1200" fill="url(#glow)"/>
+  <circle cx="800" cy="324" r="40" fill="#f4ecda" opacity="0.85"/>
+<path d="M 0 1200 L 0 504.0 Q 400.0 442.0 800.0 462.0 Q 1200.0 442.0 1600.0 504.0 L 1600 1200 Z" fill="#3a2e1d" opacity="1"/><path d="M 0 1200 L 0 600.0 Q 400.0 544.0 800.0 564.0 Q 1200.0 544.0 1600.0 606.0 L 1600 1200 Z" fill="#2a2214" opacity="1"/><rect x="0" y="672" width="1600" height="528" fill="#1a2321"/><rect x="0" y="672" width="1600" height="528" fill="url(#glow)" opacity="0.5"/><path d="M -20 690 Q 800 660 1620 690" fill="none" stroke="#d8cbac" stroke-width="0.8" opacity="0.28"/><path d="M -20 741 Q 800 713 1620 741" fill="none" stroke="#d8cbac" stroke-width="1.4" opacity="0.27"/><path d="M -20 792 Q 800 766 1620 792" fill="none" stroke="#d8cbac" stroke-width="0.8" opacity="0.25"/><path d="M -20 843 Q 800 819 1620 843" fill="none" stroke="#d8cbac" stroke-width="1.4" opacity="0.24"/><path d="M -20 894 Q 800 872 1620 894" fill="none" stroke="#d8cbac" stroke-width="0.8" opacity="0.22"/><path d="M -20 945 Q 800 925 1620 945" fill="none" stroke="#d8cbac" stroke-width="1.4" opacity="0.21"/><path d="M -20 996 Q 800 978 1620 996" fill="none" stroke="#d8cbac" stroke-width="0.8" opacity="0.19"/><path d="M -20 1047 Q 800 1031 1620 1047" fill="none" stroke="#d8cbac" stroke-width="1.4" opacity="0.18"/><path d="M -20 1098 Q 800 1084 1620 1098" fill="none" stroke="#d8cbac" stroke-width="0.8" opacity="0.16"/><path d="M -20 1149 Q 800 1137 1620 1149" fill="none" stroke="#d8cbac" stroke-width="1.4" opacity="0.15"/><path d="M 736 672 L 672 1200 L 928 1200 L 864 672 Z" fill="#f4ecda" opacity="0.10"/><line x1="0" y1="672" x2="1600" y2="672" stroke="#d8cbac" stroke-width="2" opacity="0.5"/><rect x="192" y="638" width="120" height="16" rx="4" fill="#211c15" stroke="#d8cbac" stroke-opacity="0.4"/><rect x="192" y="608" width="34" height="30" rx="4" fill="#211c15" stroke="#d8cbac" stroke-opacity="0.4"/><rect x="384" y="638" width="120" height="16" rx="4" fill="#211c15" stroke="#d8cbac" stroke-opacity="0.4"/><rect x="384" y="608" width="34" height="30" rx="4" fill="#211c15" stroke="#d8cbac" stroke-opacity="0.4"/><path d="M 1452.8 672.0 C 1450.4 659.1, 1454.8 659.1, 1454.8 646.3 L 1489.2 646.3 C 1489.2 659.1, 1493.6 659.1, 1491.2 672.0 Z" fill="#1d170f" opacity="0.92"/><path d="M 1454.8 646.3 C 1457.2 633.4, 1456.8 633.4, 1456.8 620.6 L 1487.2 620.6 C 1487.2 633.4, 1486.8 633.4, 1489.2 646.3 Z" fill="#1d170f" opacity="0.92"/><path d="M 1456.8 620.6 C 1454.4 607.7, 1459.0 607.7, 1459.0 594.9 L 1485.0 594.9 C 1485.0 607.7, 1489.6 607.7, 1487.2 620.6 Z" fill="#1d170f" opacity="0.92"/><path d="M 1459.0 594.9 C 1461.4 582.0, 1461.4 582.0, 1461.4 569.1 L 1482.6 569.1 C 1482.6 582.0, 1482.6 582.0, 1485.0 594.9 Z" fill="#1d170f" opacity="0.92"/><path d="M 1461.4 569.1 C 1459.0 556.3, 1464.0 556.3, 1464.0 543.4 L 1480.0 543.4 C 1480.0 556.3, 1485.0 556.3, 1482.6 569.1 Z" fill="#1d170f" opacity="0.92"/><path d="M 1464.0 543.4 C 1466.4 530.6, 1467.1 530.6, 1467.1 517.7 L 1476.9 517.7 C 1476.9 530.6, 1477.6 530.6, 1480.0 543.4 Z" fill="#1d170f" opacity="0.92"/><path d="M 1467.1 517.7 C 1464.7 504.9, 1472.0 504.9, 1472.0 492.0 L 1472.0 492.0 C 1472.0 504.9, 1479.3 504.9, 1476.9 517.7 Z" fill="#1d170f" opacity="0.92"/><line x1="1472.0" y1="672.0000000000001" x2="1472.0" y2="684.0000000000001" stroke="#1d170f" stroke-width="3.0" opacity="0.92"/><rect x="26" y="26" width="1548" height="1148" fill="none" stroke="#d8cbac" stroke-opacity="0.22" stroke-width="1.5"/><text x="1312.0" y="1224.0" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="560" fill="#d8cbac" opacity="0.05" text-anchor="middle">V</text>
+  <rect width="1600" height="1200" fill="url(#vign)"/>
+</svg>

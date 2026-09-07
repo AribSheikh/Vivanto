@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "vivanto-static6",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "9214"],
+      "port": 9214
+    },
+    {
+      "name": "vivanto-next-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "vivanto-next", "run", "dev"],
+      "port": 3000
+    }
+  ]
+}

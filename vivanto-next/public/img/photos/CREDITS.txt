@@ -1,0 +1,33 @@
+Photography used on this site — all sourced from Unsplash under the Unsplash License
+(free to use, no attribution legally required; credited here as good practice).
+Replace with your own property photography before a real launch.
+
+pasta.jpg           — "Pasta in tomato sauce" by Vinn Koonyosying
+                       https://unsplash.com/photos/PLyJqEJVre0
+antipasto.jpg        — "Appetizer board with assorted cheeses, cured meats, and fresh grapes"
+                       by Bruno Dias — https://unsplash.com/photos/kIvUVkVb2uI
+pool-hero.jpg        — by Roan Lavery — https://unsplash.com/photos/sEcYfPfKOhw
+window-view.jpg      — "Open window view of a swimming pool and tuscan landscape"
+                       by Alessandro Guarino — https://unsplash.com/photos/qdJCZrRT9Xo
+spa-guest.jpg        — "Woman in white dress shirt sitting on chair" by Vladimir Yelizarov
+                       https://unsplash.com/photos/6BPKOq92Adc
+terrace-dining.jpg   — "People are eating outside at an Italian cafe" by Sara Abilova
+                       https://unsplash.com/photos/ga5yjpU8KSw
+
+Pakistan location photography — sourced from Wikimedia Commons, cropped/resized for web.
+Credit required under their respective licenses (CC BY-SA / CC0).
+
+loc-lahore.jpg       — "Badshahi Mosque front picture" by Romero Maia, CC BY-SA 4.0
+                       https://commons.wikimedia.org/wiki/File:Badshahi_Mosque_front_picture.jpg
+loc-multan.jpg       — "Shrine Shah Rukn-e-Alam" by Yaarahmadd, CC BY-SA 4.0
+                       https://commons.wikimedia.org/wiki/File:Shrine_Shah_Rukn-e-Alam.jpg
+loc-karachi.jpg      — "Clifton Karachi View" by Ktownboy103, CC0
+                       https://commons.wikimedia.org/wiki/File:Clifton_Karachi_View.jpg
+loc-nathiagali.jpg   — "Nathia Gali Pakistan" by King Eliot, CC BY-SA 4.0
+                       https://commons.wikimedia.org/wiki/File:Nathia_Gali_Pakistan.jpg
+loc-kalam.jpg        — "Kalam, Swat (Pakistan)" by Muhammad Akram Attari, CC BY-SA 4.0
+                       https://commons.wikimedia.org/wiki/File:Kalam,_Swat_(Pakistan).jpg
+loc-swat-lake.jpg    — "Mahodand" by Bilalzahid12345, CC BY-SA 4.0
+                       https://commons.wikimedia.org/wiki/File:Mahodand_l.jpg
+loc-islamabad.jpg    — "Faisal Mosque" by Ali Mujtaba, CC BY-SA 4.0
+                       https://commons.wikimedia.org/wiki/File:Ali_Mujtaba_WLM2017_FAISAL_MOSQUE_019.jpg
