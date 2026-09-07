@@ -119,6 +119,9 @@ button{ font-family:inherit; cursor:pointer; background:none; border:none; color
 .btn.light{ border-color:rgba(255,255,255,.55); color:var(--white); }
 .btn.light::before{ background:var(--white); }
 .btn.light:hover{ color:var(--ink); }
+.site-header.is-solid .btn.light{ border-color:var(--ink); color:var(--ink); }
+.site-header.is-solid .btn.light::before{ background:var(--ink); }
+.site-header.is-solid .btn.light:hover{ color:var(--cream); }
 
 /* =========================================================
    HEADER / NAV
@@ -292,6 +295,29 @@ hr.gold{ border:none; height:1px; background:var(--line-gold); }
 @keyframes scroll-x{ from{ transform:translateX(0);} to{ transform:translateX(-50%);} }
 
 /* =========================================================
+   HERO extras: slow Ken Burns zoom, quick-links, fact strip
+========================================================= */
+@keyframes hero-kenburns{ 0%{ transform:scale(1); } 100%{ transform:scale(1.09); } }
+.hero-bg-img{ animation:hero-kenburns 24s ease-in-out infinite alternate; }
+
+@keyframes scroll-bounce{ 0%,100%{ transform:translateY(0); opacity:.45; } 50%{ transform:translateY(10px); opacity:1; } }
+.hero-scroll-cue .line{ animation:scroll-bounce 2.4s ease-in-out infinite; }
+
+.hero-quicklinks{ display:flex; align-items:center; gap:16px; flex-wrap:wrap; font-family:var(--sans); font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; }
+.hero-quicklinks a{ color:rgba(255,255,255,.72); position:relative; padding-bottom:4px; transition:color .3s; }
+.hero-quicklinks a::after{ content:""; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--gold-pale); transition:width .35s var(--ease); }
+.hero-quicklinks a:hover{ color:var(--white); }
+.hero-quicklinks a:hover::after{ width:100%; }
+.hero-quicklinks .sep{ color:rgba(255,255,255,.28); }
+
+.hero-facts{ display:flex; }
+.hero-facts .f{ padding:0 24px; border-left:1px solid rgba(255,255,255,.18); text-align:left; }
+.hero-facts .f:first-child{ padding-left:0; border-left:none; }
+.hero-facts .n{ font-family:var(--serif); font-size:24px; color:var(--gold-pale); line-height:1; }
+.hero-facts .l{ font-family:var(--sans); font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.55); margin-top:6px; }
+@media (max-width: 640px){ .hero-facts{ display:none; } }
+
+/* =========================================================
    SECTION: INTRO / SPLIT
    ========================================================= */
 .split{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(30px,6vw,110px); align-items:center; }
@@ -443,20 +469,34 @@ hr.gold{ border:none; height:1px; background:var(--line-gold); }
 .price-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:2px; background:var(--line); }
 @media (max-width: 1080px){ .price-grid{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width: 560px){ .price-grid{ grid-template-columns:1fr; } }
-.price-card{ background:var(--bg); padding:clamp(30px,3vw,40px) 26px; display:flex; flex-direction:column; text-align:center; }
-.price-card.is-featured{ background:var(--ink); }
-.price-card .tier-name{ font-family:var(--serif); font-size:21px; color:var(--ink); margin-bottom:18px; }
-.price-card.is-featured .tier-name{ color:var(--white); }
+.price-card{
+  --tier-color: var(--gold-deep);
+  position:relative; background:var(--cream); padding:clamp(34px,3vw,42px) 26px 30px;
+  display:flex; flex-direction:column; text-align:center; overflow:hidden;
+  transition:transform .4s var(--ease), box-shadow .4s var(--ease);
+}
+.price-card::before{ content:""; position:absolute; top:0; left:0; right:0; height:4px; background:var(--tier-color); }
+.price-card:hover{ transform:translateY(-6px); box-shadow:0 24px 40px -28px rgba(32,29,24,.4); z-index:1; }
+.price-card.tier-bronze{ --tier-color:#9c7345; }
+.price-card.tier-silver{ --tier-color:#848d94; }
+.price-card.tier-gold{ --tier-color:#ad8a2e; }
+.price-card.tier-platinum{ --tier-color:#5f7480; }
+.price-card.tier-elite{ --tier-color:var(--gold-pale); background:var(--ink); }
+.price-card .tier-name{ font-family:var(--serif); font-size:21px; color:var(--tier-color); margin-bottom:18px; }
+.price-card.tier-elite .tier-name{ color:var(--white); }
 .price-card .price-tag{ display:block; margin-bottom:22px; }
-.price-card.is-featured .price-tag{ color:var(--gold-pale); }
-.price-card.is-featured .price-tag small{ color:rgba(255,255,255,.5); }
+.price-card.tier-elite .price-tag{ color:var(--gold-pale); }
+.price-card.tier-elite .price-tag small{ color:rgba(255,255,255,.5); }
 .price-card ul{ text-align:left; flex:1; margin-bottom:24px; }
 .price-card ul li{ font-size:13.5px; color:var(--ink-soft); padding:9px 0; border-bottom:1px solid var(--line); }
-.price-card ul li b{ color:var(--gold-deep); font-weight:600; }
-.price-card.is-featured ul li{ border-color:rgba(255,255,255,.14); color:rgba(255,255,255,.72); }
-.price-card.is-featured ul li b{ color:var(--gold-pale); }
+.price-card ul li b{ color:var(--tier-color); font-weight:600; }
+.price-card.tier-elite ul li{ border-color:rgba(255,255,255,.14); color:rgba(255,255,255,.72); }
+.price-card.tier-elite ul li b{ color:var(--gold-pale); }
 .price-card .validity{ font-family:var(--sans); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:22px; }
-.price-card.is-featured .validity{ color:rgba(255,255,255,.45); }
+.price-card.tier-elite .validity{ color:rgba(255,255,255,.45); }
+.price-card.tier-elite .btn.gold{ border-color:var(--gold-pale); color:var(--gold-pale); }
+.price-card.tier-elite .btn.gold::before{ background:var(--gold-pale); }
+.price-card.tier-elite .btn.gold:hover{ color:var(--ink); }
 
 /* INVESTMENT SLOTS + OPTIONS */
 .stats-row.cols-3{ grid-template-columns:repeat(3,1fr); }

@@ -8,6 +8,11 @@ export default function Footer() {
             <span className="lang-it">L&apos;ospitalità italiana firmata Leafy Resort Italy, il nostro flagship a Multan.</span>
             <span className="lang-en">Italian hospitality by Leafy Resort Italy, our flagship in Multan.</span>
           </p>
+          <p style={{ marginTop: '10px' }}>
+            <a href="mailto:contact@vivantoresort.com" style={{ color: 'rgba(255,255,255,.68)' }}>
+              contact@vivantoresort.com
+            </a>
+          </p>
           <div className="social-row">
             <a href="#" aria-label="Instagram">IG</a>
             <a href="#" aria-label="Facebook">FB</a>

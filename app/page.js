@@ -17,6 +17,7 @@ export default function HomePage() {
           style={{ position: 'absolute', inset: '-10% 0 0 0', height: '120%' }}
         >
           <img
+            className="hero-bg-img"
             src="/img/photos/hotel-exterior.PNG"
             alt="Vivanto, an Italian-designed facade at dusk"
             style={{
@@ -106,8 +107,56 @@ export default function HomePage() {
               </span>
             </a>
           </div>
+          <div
+            data-reveal="up"
+            style={{ '--rd': 4, marginTop: '26px', display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}
+          >
+            <span
+              style={{
+                fontFamily: 'var(--sans)', fontSize: '11.5px', letterSpacing: '.16em',
+                textTransform: 'uppercase', color: 'rgba(255,255,255,.45)',
+              }}
+            >
+              <span className="lang-it">Proprietà &amp; Membership</span>
+              <span className="lang-en">Ownership &amp; Membership</span>
+            </span>
+            <span className="hero-quicklinks">
+              <a href="/membership">
+                <span className="lang-it">Membership</span>
+                <span className="lang-en">Membership</span>
+              </a>
+              <span className="sep">·</span>
+              <a href="/invest">
+                <span className="lang-it">Investi</span>
+                <span className="lang-en">Invest</span>
+              </a>
+            </span>
+          </div>
+          <div className="hero-facts" data-reveal="up" style={{ '--rd': 5, marginTop: '44px' }}>
+            <div className="f">
+              <div className="n">3</div>
+              <div className="l">
+                <span className="lang-it">Destinazioni</span>
+                <span className="lang-en">Destinations</span>
+              </div>
+            </div>
+            <div className="f">
+              <div className="n">2</div>
+              <div className="l">
+                <span className="lang-it">Ettari a Multan</span>
+                <span className="lang-en">Acres in Multan</span>
+              </div>
+            </div>
+            <div className="f">
+              <div className="n">5★</div>
+              <div className="l">
+                <span className="lang-it">Design Italiano</span>
+                <span className="lang-en">Italian Design</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div
+        <div className="hero-scroll-cue"
           style={{
             position: 'absolute',
             right: 'var(--pad)',
@@ -125,6 +174,7 @@ export default function HomePage() {
           }}
         >
           <span
+            className="line"
             style={{
               width: '1px',
               height: '60px',

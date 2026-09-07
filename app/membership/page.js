@@ -55,7 +55,7 @@ export default function MembershipPage() {
         <div className="container">
           <div className="price-grid" data-reveal-group>
             {/* BRONZE */}
-            <div className="price-card" data-reveal="up" style={{ '--rd': 0 }}>
+            <div className="price-card tier-bronze" data-reveal="up" style={{ '--rd': 0 }}>
               <span className="tier-name">
                 <span className="lang-it">Pacchetto Bronze</span>
                 <span className="lang-en">Bronze Package</span>
@@ -80,7 +80,7 @@ export default function MembershipPage() {
             </div>
 
             {/* SILVER */}
-            <div className="price-card" data-reveal="up" style={{ '--rd': 1 }}>
+            <div className="price-card tier-silver" data-reveal="up" style={{ '--rd': 1 }}>
               <span className="tier-name">
                 <span className="lang-it">Pacchetto Silver</span>
                 <span className="lang-en">Silver Package</span>
@@ -107,7 +107,7 @@ export default function MembershipPage() {
             </div>
 
             {/* GOLD */}
-            <div className="price-card is-featured" data-reveal="up" style={{ '--rd': 2 }}>
+            <div className="price-card tier-gold" data-reveal="up" style={{ '--rd': 2 }}>
               <span className="tier-name">
                 <span className="lang-it">Pacchetto Gold</span>
                 <span className="lang-en">Gold Package</span>
@@ -142,7 +142,7 @@ export default function MembershipPage() {
             </div>
 
             {/* PLATINUM */}
-            <div className="price-card" data-reveal="up" style={{ '--rd': 3 }}>
+            <div className="price-card tier-platinum" data-reveal="up" style={{ '--rd': 3 }}>
               <span className="tier-name">
                 <span className="lang-it">Pacchetto Platinum</span>
                 <span className="lang-en">Platinum Package</span>
@@ -189,7 +189,7 @@ export default function MembershipPage() {
             </div>
 
             {/* ELITE */}
-            <div className="price-card is-featured" data-reveal="up" style={{ '--rd': 4 }}>
+            <div className="price-card tier-elite" data-reveal="up" style={{ '--rd': 4 }}>
               <span className="tier-name">
                 <span className="lang-it">Pacchetto Elite</span>
                 <span className="lang-en">Elite Package</span>

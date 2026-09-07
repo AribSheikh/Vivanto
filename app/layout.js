@@ -8,7 +8,12 @@ export const metadata = {
   description:
     'Vivanto Hotels & Resorts — un flagship a cinque stelle a Multan, firmato in collaborazione con Leafy Resort Italy, con Islamabad e Nathia Gali a seguire. A five-star flagship in Multan, in collaboration with Leafy Resort Italy, with Islamabad and Nathia Gali to follow. A Project by Daha Group.',
   icons: {
-    icon: '/img/logo-trim.png',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/img/logo-mark-512.png', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: '/img/apple-touch-icon.png',
+    shortcut: '/favicon.ico',
   },
 };
 
