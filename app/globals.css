@@ -206,9 +206,13 @@ button{ font-family:inherit; cursor:pointer; background:none; border:none; color
 
 /* mobile nav */
 @media (max-width: 1080px){
-  .main-nav{ position:fixed; inset:0 0 0 auto; width:min(86vw,380px); background:var(--ink); flex-direction:column; align-items:flex-start; padding:110px 40px 40px; transform:translateX(100%); transition:transform .55s var(--ease); gap:40px; }
+  .main-nav{ position:fixed; inset:0 0 0 auto; width:min(86vw,380px); background:var(--ink); flex-direction:column; align-items:flex-start; padding:110px 40px 40px; transform:translateX(100%); transition:transform .55s var(--ease); gap:40px; overflow-y:auto; -webkit-overflow-scrolling:touch; }
   .main-nav.is-open{ transform:translateX(0); }
   .main-nav ul{ flex-direction:column; gap:22px; }
+  @media (max-height: 700px){
+    .main-nav{ padding:90px 40px 30px; gap:26px; }
+    .main-nav ul{ gap:16px; }
+  }
   .main-nav a{ color:rgba(255,255,255,.85); font-size:14px; }
   .main-nav .lang-switch{ color:rgba(255,255,255,.7); }
   .nav-toggle{ display:flex; z-index:950; }
