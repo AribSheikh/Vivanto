@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { href: '/spa', it: 'Spa & Benessere', en: 'Spa & Wellness' },
   { href: '/membership', it: 'Membership', en: 'Membership' },
   { href: '/invest', it: 'Investi', en: 'Invest' },
+  { href: '/slots', it: 'Stato Slot', en: 'Slot Status' },
   { href: '/contact', it: 'Contatti', en: 'Contact' },
 ];
 

@@ -68,6 +68,12 @@ export default function Footer() {
                 <span className="lang-en">Invest</span>
               </a>
             </li>
+            <li>
+              <a href="/slots">
+                <span className="lang-it">Stato Slot</span>
+                <span className="lang-en">Slot Status</span>
+              </a>
+            </li>
           </ul>
         </div>
         <div>

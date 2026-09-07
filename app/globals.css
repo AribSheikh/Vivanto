@@ -564,3 +564,61 @@ hr.gold{ border:none; height:1px; background:var(--line-gold); }
 .room-card:nth-child(even){ direction:rtl; }
 .room-card:nth-child(even) > *{ direction:ltr; }
 @media (max-width: 860px){ .room-card{ grid-template-columns:1fr; direction:ltr !important; } .room-card > *{ direction:ltr !important; } }
+
+/* =========================================================
+   SLOT STATUS PAGE
+========================================================= */
+.slot-legend{ display:flex; gap:26px; margin-bottom:28px; flex-wrap:wrap; font-family:var(--sans); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); }
+.slot-legend span{ display:inline-flex; align-items:center; gap:8px; }
+.dot{ width:9px; height:9px; border-radius:50%; display:inline-block; }
+.dot-company{ background:var(--ink-faint); }
+.dot-allocated{ background:var(--gold-deep); }
+.dot-available{ background:#6b8f63; }
+
+.slot-grid-full{ display:grid; grid-template-columns:repeat(auto-fill, minmax(46px,1fr)); gap:6px; }
+.slot-tile{
+  aspect-ratio:1/1; display:flex; align-items:center; justify-content:center;
+  font-family:var(--sans); font-size:11px; color:var(--white); border-radius:4px; user-select:none;
+}
+.slot-tile.slot-company{ background:var(--ink-faint); }
+.slot-tile.slot-allocated{ background:var(--gold-deep); }
+.slot-tile.slot-available{ background:#6b8f63; }
+@media (max-width: 560px){
+  .slot-grid-full{ grid-template-columns:repeat(auto-fill, minmax(38px,1fr)); }
+  .slot-tile{ font-size:10px; }
+}
+
+/* =========================================================
+   ADMIN PANEL
+========================================================= */
+/* padding-top clears the site's fixed header (~137px incl. utility bar) --
+   without it, admin content renders underneath the header's hit area and
+   clicks near the top (e.g. Log Out) land on the header's own links
+   instead, since the fixed header sits at a higher z-index. */
+.admin-shell{ min-height:100vh; background:var(--cream); padding:160px 24px 60px; }
+.admin-card{ max-width:420px; margin:80px auto; background:var(--white); border:1px solid var(--line); padding:44px; }
+.admin-card h1{ font-size:24px; margin-bottom:8px; }
+.admin-card p{ color:var(--ink-faint); font-size:14px; margin-bottom:26px; }
+.admin-wrap{ max-width:1100px; margin:0 auto; }
+.admin-topbar{ display:flex; justify-content:space-between; align-items:center; margin-bottom:30px; flex-wrap:wrap; gap:14px; }
+.admin-topbar h1{ font-size:26px; margin:0; }
+.admin-stats{ display:flex; gap:18px; margin-bottom:26px; flex-wrap:wrap; }
+.admin-stat{ background:var(--white); border:1px solid var(--line); padding:16px 22px; }
+.admin-stat .n{ font-family:var(--serif); font-size:26px; color:var(--gold-deep); }
+.admin-stat .l{ font-family:var(--sans); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
+.admin-table-wrap{ overflow-x:auto; background:var(--white); border:1px solid var(--line); }
+.admin-table{ width:100%; border-collapse:collapse; font-size:14px; min-width:760px; }
+.admin-table th{ text-align:left; font-family:var(--sans); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-faint); padding:12px 14px; border-bottom:1px solid var(--line); }
+.admin-table td{ padding:10px 14px; border-bottom:1px solid var(--line); vertical-align:middle; }
+.admin-table tr:last-child td{ border-bottom:none; }
+.admin-badge{ display:inline-block; padding:3px 10px; border-radius:20px; font-size:11px; letter-spacing:.04em; text-transform:uppercase; color:var(--white); }
+.admin-badge.company{ background:var(--ink-faint); }
+.admin-badge.allocated{ background:var(--gold-deep); }
+.admin-badge.available{ background:#6b8f63; }
+.admin-row-form{ display:flex; gap:6px; flex-wrap:wrap; }
+.admin-row-form input{ font-size:13px; padding:6px 8px; border:1px solid var(--line); background:var(--cream); width:120px; }
+.admin-btn{ font-family:var(--sans); font-size:11px; letter-spacing:.06em; text-transform:uppercase; padding:6px 12px; border:1px solid var(--ink); color:var(--ink); background:none; cursor:pointer; transition:background .2s, color .2s; }
+.admin-btn:hover{ background:var(--ink); color:var(--white); }
+.admin-btn.danger{ border-color:#a5453a; color:#a5453a; }
+.admin-btn.danger:hover{ background:#a5453a; color:var(--white); }
+.admin-btn:disabled{ opacity:.5; cursor:not-allowed; }
