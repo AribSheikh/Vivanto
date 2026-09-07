@@ -50,7 +50,7 @@ export default function InvestPage() {
               </div>
             </div>
             <div className="stat">
-              <div className="n">200</div>
+              <div className="n">230</div>
               <div className="l">
                 <span className="lang-it">Slot Totali</span>
                 <span className="lang-en">Total No. of Slots</span>
@@ -295,11 +295,11 @@ export default function InvestPage() {
                 </h4>
                 <p>
                   <span className="lang-it">
-                    Il sito mostrerà l&apos;inventario completo dei 200 slot totali, permettendo a
+                    Il sito mostrerà l&apos;inventario completo dei 230 slot totali, permettendo a
                     tutte le parti di verificare disponibilità e assegnazioni.
                   </span>
                   <span className="lang-en">
-                    The website will display the complete inventory of 200 total slots, allowing
+                    The website will display the complete inventory of 230 total slots, allowing
                     stakeholders to verify the total number of available and allocated slots.
                   </span>
                 </p>

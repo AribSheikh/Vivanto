@@ -6,7 +6,7 @@ import GlobalEffects from './components/GlobalEffects';
 export const metadata = {
   title: 'Vivanto — Italian Hospitality, Arriving in Pakistan | A Daha Group Project',
   description:
-    'Vivanto Hotels & Resorts — un flagship a cinque stelle a Multan, firmato in collaborazione con Leafy Resort Italy, con Islamabad e Nathia Gali a seguire. A five-star flagship in Multan, in collaboration with Leafy Resort Italy, with Islamabad and Nathia Gali to follow. A Project by Daha Group.',
+    'Vivanto Hotels & Resorts — un flagship a tre stelle a Multan, firmato in collaborazione con Leafy Resort Italy, con Islamabad e Nathia Gali a seguire. A three-star flagship in Multan, in collaboration with Leafy Resort Italy, with Islamabad and Nathia Gali to follow. A Project by Daha Group.',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
