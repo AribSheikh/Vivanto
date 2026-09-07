@@ -223,8 +223,15 @@ button{ font-family:inherit; cursor:pointer; background:none; border:none; color
     .main-nav{ padding:90px 40px 30px; gap:26px; }
     .main-nav ul{ gap:16px; }
   }
-  .main-nav a{ color:rgba(255,255,255,.85); font-size:14px; }
-  .main-nav .lang-switch{ color:rgba(255,255,255,.7); }
+  /* !important: the desktop ".site-header.is-solid .main-nav a" rule
+     (dark text, for the light solid header bar) is more specific than
+     a plain ".main-nav a" selector and was winning here too, making
+     nav text nearly invisible against the drawer's dark background
+     once scrolled. The drawer's background is always dark regardless
+     of header state, so its text must always stay light. */
+  .main-nav a{ color:rgba(255,255,255,.85) !important; font-size:14px; }
+  .main-nav a.active{ color:var(--gold) !important; }
+  .main-nav .lang-switch{ color:rgba(255,255,255,.7) !important; }
   .nav-toggle{ display:flex; z-index:950; }
   .nav-toggle span{ background:var(--white) !important; }
   .site-header.is-solid .nav-toggle span{ background:var(--ink) !important; }
