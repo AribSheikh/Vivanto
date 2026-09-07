@@ -38,6 +38,18 @@ export default function Footer() {
                 <span className="lang-en">Spa &amp; Wellness</span>
               </a>
             </li>
+            <li>
+              <a href="/membership">
+                <span className="lang-it">Membership</span>
+                <span className="lang-en">Membership</span>
+              </a>
+            </li>
+            <li>
+              <a href="/invest">
+                <span className="lang-it">Investi</span>
+                <span className="lang-en">Invest</span>
+              </a>
+            </li>
           </ul>
         </div>
         <div>

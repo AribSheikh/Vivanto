@@ -439,6 +439,37 @@ hr.gold{ border:none; height:1px; background:var(--line-gold); }
 .price-tag{ font-family:var(--serif); font-size:26px; color:var(--gold-deep); }
 .price-tag small{ font-family:var(--sans); font-size:11px; color:var(--ink-faint); letter-spacing:.1em; }
 
+/* MEMBERSHIP PACKAGE CARDS */
+.price-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:2px; background:var(--line); }
+@media (max-width: 1080px){ .price-grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width: 560px){ .price-grid{ grid-template-columns:1fr; } }
+.price-card{ background:var(--bg); padding:clamp(30px,3vw,40px) 26px; display:flex; flex-direction:column; text-align:center; }
+.price-card.is-featured{ background:var(--ink); }
+.price-card .tier-name{ font-family:var(--serif); font-size:21px; color:var(--ink); margin-bottom:18px; }
+.price-card.is-featured .tier-name{ color:var(--white); }
+.price-card .price-tag{ display:block; margin-bottom:22px; }
+.price-card.is-featured .price-tag{ color:var(--gold-pale); }
+.price-card.is-featured .price-tag small{ color:rgba(255,255,255,.5); }
+.price-card ul{ text-align:left; flex:1; margin-bottom:24px; }
+.price-card ul li{ font-size:13.5px; color:var(--ink-soft); padding:9px 0; border-bottom:1px solid var(--line); }
+.price-card ul li b{ color:var(--gold-deep); font-weight:600; }
+.price-card.is-featured ul li{ border-color:rgba(255,255,255,.14); color:rgba(255,255,255,.72); }
+.price-card.is-featured ul li b{ color:var(--gold-pale); }
+.price-card .validity{ font-family:var(--sans); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:22px; }
+.price-card.is-featured .validity{ color:rgba(255,255,255,.45); }
+
+/* INVESTMENT SLOTS + OPTIONS */
+.stats-row.cols-3{ grid-template-columns:repeat(3,1fr); }
+@media (max-width: 760px){ .stats-row.cols-3{ grid-template-columns:1fr; } }
+.dash-list{ list-style:none; }
+.dash-list li{ font-size:15.5px; color:var(--ink-soft); padding:10px 0; border-bottom:1px solid var(--line); }
+.dash-list li b{ color:var(--ink); font-weight:600; }
+.info-list > div{ display:flex; gap:22px; padding:26px 0; border-bottom:1px solid var(--line); }
+.info-list > div:last-child{ border-bottom:none; }
+.info-list .num-index{ flex-shrink:0; padding-top:3px; }
+.info-list h4{ font-family:var(--serif); font-size:18px; margin-bottom:6px; color:var(--ink); font-weight:400; }
+.info-list p{ font-size:14.5px; color:var(--ink-soft); line-height:1.75; margin:0; }
+
 /* form */
 .field{ margin-bottom:26px; }
 .field label{ display:block; font-family:var(--sans); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:10px; }

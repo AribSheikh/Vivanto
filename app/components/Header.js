@@ -7,6 +7,8 @@ const NAV_LINKS = [
   { href: '/rooms', it: 'Camere & Suite', en: 'Rooms & Suites' },
   { href: '/dining', it: 'Ristorante', en: 'Dining' },
   { href: '/spa', it: 'Spa & Benessere', en: 'Spa & Wellness' },
+  { href: '/membership', it: 'Membership', en: 'Membership' },
+  { href: '/invest', it: 'Investi', en: 'Invest' },
   { href: '/contact', it: 'Contatti', en: 'Contact' },
 ];
 
