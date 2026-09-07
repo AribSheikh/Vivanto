@@ -14,9 +14,22 @@ export default function Footer() {
             </a>
           </p>
           <div className="social-row">
-            <a href="#" aria-label="Instagram">IG</a>
-            <a href="#" aria-label="Facebook">FB</a>
-            <a href="#" aria-label="Pinterest">PT</a>
+            <a
+              href="https://www.instagram.com/vivantoresort"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              IG
+            </a>
+            <a
+              href="https://www.facebook.com/people/Vivanto-Hotel-Resort/61594212202191/"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              FB
+            </a>
           </div>
         </div>
         <div>

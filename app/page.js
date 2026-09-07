@@ -148,7 +148,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="f">
-              <div className="n">3★</div>
+              <div className="n">4★</div>
               <div className="l">
                 <span className="lang-it">Design Italiano</span>
                 <span className="lang-en">Italian Design</span>
@@ -195,16 +195,16 @@ export default function HomePage() {
           <span className="lang-it">Tre Destinazioni</span>
           <span className="lang-en">Three Destinations</span>
           <span>Design Italiano</span>
-          <span className="lang-it">Tre Stelle</span>
-          <span className="lang-en">Three Stars</span>
+          <span className="lang-it">Quattro Stelle</span>
+          <span className="lang-en">Four Stars</span>
           <span>Pakistan</span>
           <span className="lang-it">In Collaborazione con Leafy Resort Italy</span>
           <span className="lang-en">In Collaboration with Leafy Resort Italy</span>
           <span className="lang-it">Tre Destinazioni</span>
           <span className="lang-en">Three Destinations</span>
           <span>Design Italiano</span>
-          <span className="lang-it">Tre Stelle</span>
-          <span className="lang-en">Three Stars</span>
+          <span className="lang-it">Quattro Stelle</span>
+          <span className="lang-en">Four Stars</span>
           <span>Pakistan</span>
         </div>
       </div>
@@ -273,9 +273,9 @@ export default function HomePage() {
           <div className="n">
             <span data-count="2026">0</span>
           </div>
-          <div className="l lang-it">Fondata nel</div>
-          <div className="l lang-en" style={{ display: 'none' }}>
-            Established
+          <div className="l">
+            <span className="lang-it">Fondata nel</span>
+            <span className="lang-en">Established</span>
           </div>
         </div>
         <div className="stat" data-reveal="up" style={{ '--rd': 2 }}>
@@ -289,7 +289,7 @@ export default function HomePage() {
         </div>
         <div className="stat" data-reveal="up" style={{ '--rd': 3 }}>
           <div className="n">
-            <span data-count="3">0</span> ★
+            <span data-count="4">0</span> ★
           </div>
           <div className="l">
             <span className="lang-it">Stelle</span>
