@@ -23,7 +23,7 @@ export default async function AdminPage() {
     );
   }
 
-  const slots = getAllSlotsAdmin();
+  const slots = await getAllSlotsAdmin();
   return (
     <div className="admin-shell">
       <AdminDashboard initialSlots={slots} />

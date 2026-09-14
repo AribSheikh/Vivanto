@@ -15,8 +15,8 @@ const STATUS_LABEL = {
 
 export const dynamic = 'force-dynamic';
 
-export default function SlotsPage() {
-  const slots = getPublicSlotStatuses();
+export default async function SlotsPage() {
+  const slots = await getPublicSlotStatuses();
 
   return (
     <>

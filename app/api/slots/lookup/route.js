@@ -21,7 +21,7 @@ export async function POST(request) {
 
   const digits = normalizeCnic(query);
   if (digits.length === 13) {
-    const result = findByCnic(digits);
+    const result = await findByCnic(digits);
     if (!result) {
       return Response.json({ error: 'No slot is registered to that CNIC.' }, { status: 404 });
     }
@@ -33,7 +33,7 @@ export async function POST(request) {
     if (n < 1 || n > 230) {
       return Response.json({ error: 'Slot number must be between 1 and 230.' }, { status: 400 });
     }
-    const result = findStatusBySlotNumber(n);
+    const result = await findStatusBySlotNumber(n);
     if (!result) {
       return Response.json({ error: 'Slot not found.' }, { status: 404 });
     }

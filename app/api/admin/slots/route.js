@@ -13,7 +13,7 @@ export async function GET(request) {
     return Response.json({ error: 'Unauthorized.' }, { status: 401 });
   }
   const q = request.nextUrl.searchParams.get('q');
-  const slots = q ? searchSlotsAdmin(q) : getAllSlotsAdmin();
+  const slots = q ? await searchSlotsAdmin(q) : await getAllSlotsAdmin();
   return Response.json({ slots });
 }
 
@@ -40,11 +40,11 @@ export async function PATCH(request) {
       if (!name || !cnic) {
         return Response.json({ error: 'Name and CNIC are required to allot a slot.' }, { status: 400 });
       }
-      slot = allotSlot(slotNumber, { name, cnic });
+      slot = await allotSlot(slotNumber, { name, cnic });
     } else if (action === 'release') {
-      slot = releaseSlot(slotNumber);
+      slot = await releaseSlot(slotNumber);
     } else if (action === 'company') {
-      slot = markCompanySlot(slotNumber);
+      slot = await markCompanySlot(slotNumber);
     } else {
       return Response.json({ error: 'Unknown action.' }, { status: 400 });
     }
