@@ -575,17 +575,15 @@ hr.gold{ border:none; height:1px; background:var(--line-gold); }
 .dot-allocated{ background:var(--gold-deep); }
 .dot-available{ background:#6b8f63; }
 
-.slot-grid-full{ display:grid; grid-template-columns:repeat(auto-fill, minmax(46px,1fr)); gap:6px; }
-.slot-tile{
-  aspect-ratio:1/1; display:flex; align-items:center; justify-content:center;
-  font-family:var(--sans); font-size:11px; color:var(--white); border-radius:4px; user-select:none;
-}
-.slot-tile.slot-company{ background:var(--ink-faint); }
-.slot-tile.slot-allocated{ background:var(--gold-deep); }
-.slot-tile.slot-available{ background:#6b8f63; }
+.slot-card-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(220px,1fr)); gap:10px; }
+.slot-card{ border:1px solid var(--line); background:var(--white); padding:16px 18px; }
+.slot-card-top{ display:flex; justify-content:space-between; align-items:center; gap:10px; }
+.slot-card-num{ font-family:var(--serif); font-size:16px; color:var(--ink-faint); }
+.slot-card-body{ margin-top:12px; padding-top:12px; border-top:1px solid var(--line); }
+.slot-card-name{ font-family:var(--serif); font-size:16px; color:var(--ink); margin-bottom:4px; }
+.slot-card-cnic{ font-family:var(--sans); font-size:12.5px; letter-spacing:.03em; color:var(--ink-faint); }
 @media (max-width: 560px){
-  .slot-grid-full{ grid-template-columns:repeat(auto-fill, minmax(38px,1fr)); }
-  .slot-tile{ font-size:10px; }
+  .slot-card-grid{ grid-template-columns:repeat(auto-fill, minmax(160px,1fr)); }
 }
 
 /* =========================================================

@@ -53,14 +53,14 @@ export default async function SlotsPage() {
           </h2>
           <p className="lede" style={{ margin: '0 auto 34px' }}>
             <span className="lang-it">
-              Per proteggere la privacy di tutti gli investitori, non pubblichiamo un elenco
-              ricercabile di nomi. Inserisci il tuo CNIC completo per trovare il tuo slot, oppure
-              un numero di slot per verificarne lo stato generale.
+              Inserisci il tuo CNIC completo per trovare rapidamente il tuo slot, oppure un
+              numero di slot per verificarne lo stato. L&apos;elenco completo, con nome e CNIC di
+              ogni slot assegnato, è consultabile qui sotto.
             </span>
             <span className="lang-en">
-              To protect every investor&apos;s privacy, we don&apos;t publish a searchable
-              directory of names. Enter your full CNIC to find your own slot, or a slot number to
-              check its general status.
+              Enter your full CNIC to quickly find your own slot, or a slot number to check its
+              status. The complete list, with the name and CNIC for every allocated slot, is
+              browsable below.
             </span>
           </p>
         </div>
@@ -101,10 +101,19 @@ export default async function SlotsPage() {
             </span>
           </div>
 
-          <div className="slot-grid-full">
+          <div className="slot-card-grid">
             {slots.map((s) => (
-              <div key={s.slotNumber} className={`slot-tile slot-${s.status}`} title={STATUS_LABEL[s.status]?.en}>
-                {s.slotNumber}
+              <div key={s.slotNumber} className={`slot-card slot-${s.status}`}>
+                <div className="slot-card-top">
+                  <span className="slot-card-num">#{s.slotNumber}</span>
+                  <span className={`admin-badge ${s.status}`}>{STATUS_LABEL[s.status]?.en}</span>
+                </div>
+                {s.status === 'allocated' && (
+                  <div className="slot-card-body">
+                    <div className="slot-card-name">{s.name}</div>
+                    <div className="slot-card-cnic">{s.cnic}</div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
