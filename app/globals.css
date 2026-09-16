@@ -273,12 +273,26 @@ body.nav-open .nav-scrim{ opacity:1; pointer-events:auto; }
    (clip-path) reveal permanently never fires (still clip-path'd fully
    hidden after 6+ seconds, no scrolling involved) -- not a timing
    issue, the IntersectionObserver callback for it simply never runs in
-   at least some real-world cases (matches a live screenshot showing
-   the heading missing entirely). Rather than debug that one observer
-   further, hero content bypasses the reveal system entirely: always
-   rendered at its final state immediately, with no dependency on JS
-   observer timing, and no transform in play to make layout position
-   uncertain either. */
+   at least some real-world cases. Confirmed live on the deployed site
+   on BOTH a secondary page's h1 (matched a user screenshot showing the
+   heading missing) AND the homepage's own "Vivanto" h1 (found while
+   auditing production directly -- same clip-path-stuck state, still
+   fully invisible with 0 opacity). "mask" is used nowhere except hero
+   h1 headings across the whole site (verified), so this is scoped to
+   the reveal type itself, not just .page-hero, to cover the homepage
+   hero too: it bypasses the reveal system entirely, always rendered
+   at its final visible state immediately, with no dependency on JS
+   observer timing. */
+[data-reveal="mask"]{
+  opacity:1 !important;
+  clip-path:inset(0 0 0% 0) !important;
+  transition:none !important;
+}
+/* The hero subtitle's "up" reveal (translateY) tested as working
+   correctly, but its transform briefly being in play during/around
+   the transition was making the hero's own vertical spacing uncertain
+   -- removing transform here too, scoped to .page-hero since that's
+   the only place a wrong measurement there was ever observed. */
 .page-hero [data-reveal]{
   opacity:1 !important;
   transform:none !important;
