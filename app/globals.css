@@ -259,14 +259,37 @@ body.nav-open .nav-scrim{ opacity:1; pointer-events:auto; }
 .page-hero .bg{ position:absolute; inset:0; overflow:hidden; }
 .page-hero .bg img{ width:100%; height:100%; object-fit:cover; transform:scale(1.08); filter:saturate(.9) brightness(.62); }
 .page-hero .bg::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(16,14,11,.35) 0%, rgba(16,14,11,.15) 40%, rgba(16,14,11,.86) 100%); }
-.page-hero .content{ position:relative; z-index:2; padding:0 0 90px; }
+/* padding-top clears the fixed site header (~124-132px depending on
+   viewport). This overlap between the header logo and the h1 was
+   previously invisible because the h1 never actually rendered (see the
+   reveal-bug note below) -- fixing that exposed this real, separate,
+   universal (not just mobile) overlap underneath it. */
+.page-hero .content{ position:relative; z-index:2; padding:150px 0 90px; }
 .page-hero h1{ font-size:clamp(46px,7vw,92px); color:var(--white); font-weight:400; }
 .page-hero .sub{ font-family:var(--serif-b); font-style:italic; font-size:19px; color:var(--gold-pale); margin-top:14px; max-width:560px; }
+/* Hero text is above the fold and already in view the instant the page
+   loads -- it should never depend on the scroll-triggered reveal system
+   at all. Confirmed a real, reproducible bug where the h1's "mask"
+   (clip-path) reveal permanently never fires (still clip-path'd fully
+   hidden after 6+ seconds, no scrolling involved) -- not a timing
+   issue, the IntersectionObserver callback for it simply never runs in
+   at least some real-world cases (matches a live screenshot showing
+   the heading missing entirely). Rather than debug that one observer
+   further, hero content bypasses the reveal system entirely: always
+   rendered at its final state immediately, with no dependency on JS
+   observer timing, and no transform in play to make layout position
+   uncertain either. */
+.page-hero [data-reveal]{
+  opacity:1 !important;
+  transform:none !important;
+  clip-path:inset(0 0 0% 0) !important;
+  transition:none !important;
+}
 @media (max-width: 640px){
   /* On the shorter hero variant (secondary pages), a subtitle that wraps
      to two lines can leave very little clearance above the image's
      bottom edge -- give it more breathing room on small screens. */
-  .page-hero .content{ padding-bottom:150px; }
+  .page-hero .content{ padding-bottom:170px; }
 }
 .crumb{ font-family:var(--sans); font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.6); margin-bottom:22px; display:block; }
 .crumb .gold{ color:var(--gold-pale); }
