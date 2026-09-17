@@ -264,7 +264,7 @@ body.nav-open .nav-scrim{ opacity:1; pointer-events:auto; }
    previously invisible because the h1 never actually rendered (see the
    reveal-bug note below) -- fixing that exposed this real, separate,
    universal (not just mobile) overlap underneath it. */
-.page-hero .content{ position:relative; z-index:2; padding:150px 0 90px; }
+.page-hero .content{ position:relative; z-index:2; padding-top:150px; padding-bottom:90px; }
 .page-hero h1{ font-size:clamp(46px,7vw,92px); color:var(--white); font-weight:400; }
 .page-hero .sub{ font-family:var(--serif-b); font-style:italic; font-size:19px; color:var(--gold-pale); margin-top:14px; max-width:560px; }
 /* Hero text is above the fold and already in view the instant the page
