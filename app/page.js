@@ -6,7 +6,7 @@ export default function HomePage() {
         style={{
           position: 'relative',
           height: '100vh',
-          minHeight: '640px',
+          minHeight: '820px',
           overflow: 'hidden',
           background: 'var(--ink)',
         }}
